@@ -160,14 +160,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Submit a pull request.
 
 ---
-
-## License
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-- Inspired by real-world GraphQL vulnerabilities and the need for robust security testing tools.
-- Thanks to the open-source community for providing the libraries and tools that made this project possible.
-
----
