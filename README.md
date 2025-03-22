@@ -57,8 +57,8 @@ To mitigate this vulnerability:
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/AliasOverload.git
-   cd AliasOverload
+   git clone https://github.com/your-username/GraphQL-Alias-Overloading-DoS-Checker.git
+   cd GraphQL-Alias-Overloading-DoS-Checker
    ```
 
 2. Install the required dependencies:
@@ -112,9 +112,9 @@ python alias_overload.py -u https://example.com/graphql --alias1 100 --alias2 20
 
 ---
 
-## Example Output
+## Example Console Output
 
-### Console Output
+### Successful Requests - 1
 ```
 Status, URL, Aliases, Start Time, End Time, Response Time
 200, https://example.com/graphql, 100, 2025-03-22 16:18:46.078157, 2025-03-22 16:18:47.211936, 1.13s
@@ -126,7 +126,19 @@ Analysis:
 https://example.com/graphql: Potential DoS vulnerability detected (higher alias count has higher response time).
 ```
 
-### File Output (`results.txt`)
+### Successful Requests - 2 (504 or Timeout)
+```
+Status, URL, Aliases, Start Time, End Time, Response Time
+200, https://pentest-ground.com:5013/graphql, 100, 2025-03-22 16:18:46.078157, 2025-03-22 16:18:47.211936, 1.13s
+504 Gateway Timeout, https://pentest-ground.com:5013/graphql, 5000, 2025-03-22 16:18:47.211936, 2025-03-22 16:18:48.691936, N/A
+
+Total Request Time: 1.13s
+
+Analysis:
+https://pentest-ground.com:5013/graphql: Potential DoS vulnerability detected (504 Gateway Timeout for alias count 5000).
+```
+
+## Example File Output (`results.txt`)
 ```
 Status, URL, Aliases, Start Time, End Time, Response Time
 200, https://example.com/graphql, 100, 2025-03-22 16:18:46.078157, 2025-03-22 16:18:47.211936, 1.13s
