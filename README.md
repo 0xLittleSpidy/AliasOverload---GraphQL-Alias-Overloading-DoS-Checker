@@ -1,4 +1,4 @@
-# AliasOverload - GraphQL Alias Overloading DoS Checker
+# GraphQL Alias Overloading DoS Checker
 
 AliasOverload is a Python-based tool designed to detect potential Denial-of-Service (DoS) vulnerabilities in GraphQL servers caused by **alias overloading**. This tool sends crafted GraphQL queries with varying numbers of aliases to measure the server's response time and identify if the server is vulnerable to alias-based DoS attacks.
 
