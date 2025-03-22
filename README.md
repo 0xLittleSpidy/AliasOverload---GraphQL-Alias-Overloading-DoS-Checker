@@ -11,8 +11,7 @@ AliasOverload is a Python-based tool designed to detect potential Denial-of-Serv
 4. [Usage](#usage)
 5. [Example Output](#example-output)
 6. [Contributing](#contributing)
-7. [License](#license)
-
+   
 ---
 
 ## About the Vulnerability
